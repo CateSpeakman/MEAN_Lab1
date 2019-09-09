@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="images/dragonboaticon.jpg">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/site.css">
+    <title>Harvey Lake Dragon Boats</title>
+</head>
+
+<body>
+    <!--nav bar-->
+    <nav class="navbar navbar-expand-lg navbar-light" id="navbar">
+        <a class="navbar-brand" id="navbarTitle" href="#">Harvey Lake Dragon Boats</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" id="homeNav" href="index.html">Home </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="aboutUsNav" href="about.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="searchNav" href="search.html">Search</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="galleryNav" href="gallery.html">Gallery</a>
+                </li>
+            </ul>
+            <img class="float-right" id="navpic" src="images/boat1.jpg" alt="dragon boat">
+        </div>
+    </nav>
+    <!--End of Nav Bar -->
+    <h1 class="mb-5 text-center" id="banner">Harvey Lake Dragon Boats</h1>
+    <main>
+
+        <!-- this section will contain bootstrap cards to be displayed upon a team being selected from
+        the search page-->
+        <div class="container">
+            <div class="row">
+                <section class="col-md-4" id="teamCardContainer">
+                    <div id="teamCard" class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <h4 class="card-title" id="teamInfoCard">&nbsp;</h4>
+                            <p class="card-text" id="cardText1">&nbsp;</p>
+                            <p class="card-text" id="cardText2">&nbsp;</p>
+                            <p class="card-text" id="cardText3">&nbsp;</p>
+                            <p class="card-text" id="cardText4">&nbsp;</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="col-md-4" id="rulesCardContainer">
+                    <div id="teamRuleCard" class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <h4 class="card-title" id="rulesCard">&nbsp;</h4>
+                            <p class="card-text" id="cardText5">&nbsp;</p>
+                            <p class="card-text" id="cardText6">&nbsp;</p>
+                            <p class="card-text" id="cardText7">&nbsp;</p>
+                            <p class="card-text" id="cardText8">&nbsp;</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <!-- this section will only display if team members are signed up for the team -->
+        <section>
+            <div class="container" id="memberListDiv">
+                <h3 class="mt-4">Team Members</h3>
+                <table class="table table-striped col-md-6" id="memberTable">
+                    <thead>
+                        <tr>
+                            <th>Member Name</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <!-- this section contains the register a member button and back button as this page is not part
+        of the navigation-->
+
+        <div class="container">
+            <a href="#" id="registerBtn" class="btn btn-info" role="button">Register Member</a>
+            <a href="#" id="backBtn" class="btn btn-info" role="button">Back</a>
+        </div>
+
+    </main>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="scripts/teamDetails.js"></script>
+</body>
+
+</html>
