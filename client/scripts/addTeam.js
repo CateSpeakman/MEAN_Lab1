@@ -5,7 +5,7 @@
 $(function () {
 
 
-    $("#cancelBtn").prop("href", "search.html");
+    $("#cancelBtn").prop("href", "search.php");
 
 
     //this function will call the JSON file and populate the dropdown for the leagues based on the call to 
@@ -61,7 +61,7 @@ $(function () {
        
         $.post("http://localhost:8081/api/teams", $("#addTeamForm").serialize(), function (data) {
             data = JSON.parse(data);
-            window.location.href = "teamDetails.html?teamid=" + data.TeamId;;
+            window.location.href = "teamDetails.php?teamid=" + data.TeamId;;
             
         });
 

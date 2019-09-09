@@ -12,7 +12,7 @@ $(function () {
     let id = urlParams.get("teamid");
 
 
-    $("#cancelBtn").prop("href", "teamDetails.html?teamid=" + id);
+    $("#cancelBtn").prop("href", "teamDetails.php?teamid=" + id);
 
     let obj;
 //this will pull the team name and populate on the form
@@ -57,7 +57,7 @@ $(function () {
         }
 
         $.post("http://localhost:8081/api/teams/" + id + "/members", $("#registerForm").serialize(), function (data) {
-            window.location.href = "teamDetails.html?teamid=" + id;
+            window.location.href = "teamDetails.php?teamid=" + id;
           
         });//ends post call
 

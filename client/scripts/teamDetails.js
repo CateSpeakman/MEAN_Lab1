@@ -10,23 +10,23 @@ $(function () {
     let urlParams = new URLSearchParams(location.search);
     let teamId = urlParams.get("teamid");
 
-    $("#registerBtn").prop("href", "addTeamMember.html?teamid=" + teamId);
-    $("#backBtn").prop("href", "search.html");
+    $("#registerBtn").prop("href", "addTeamMember.php?teamid=" + teamId);
+    $("#backBtn").prop("href", "search.php");
 
     let obj;
     //this will populate the card for team info and for the team rules
     $.getJSON("http://localhost:8081/api/teams/" + teamId, function (team) {
         obj = team;
-        $("#teamInfoCard").html(obj.TeamName);
-        $("#cardText1").html("League: " + obj.League);
-        $("#cardText2").html("Manager Name: " + obj.ManagerName);
-        $("#cardText3").html("Manager Phone: " + obj.ManagerPhone);
-        $("#cardText4").html("Manager Email: " + obj.ManagerEmail);
-        $("#rulesCard").html("Team Rules");
-        $("#cardText5").html("Maximum # Team Members: " + obj.MaxTeamMembers);
-        $("#cardText6").html("Minimum Member Age: " + obj.MinMemberAge);
-        $("#cardText7").html("Maximum Member Age: " + obj.MaxMemberAge);
-        $("#cardText8").html("Team Gender: " + obj.TeamGender);
+        $("#teamInfoCard").php(obj.TeamName);
+        $("#cardText1").php("League: " + obj.League);
+        $("#cardText2").php("Manager Name: " + obj.ManagerName);
+        $("#cardText3").php("Manager Phone: " + obj.ManagerPhone);
+        $("#cardText4").php("Manager Email: " + obj.ManagerEmail);
+        $("#rulesCard").php("Team Rules");
+        $("#cardText5").php("Maximum # Team Members: " + obj.MaxTeamMembers);
+        $("#cardText6").php("Minimum Member Age: " + obj.MinMemberAge);
+        $("#cardText7").php("Maximum Member Age: " + obj.MaxMemberAge);
+        $("#cardText8").php("Team Gender: " + obj.TeamGender);
 
 
         //this if statement will look to see if any team members are registered and if so display the list

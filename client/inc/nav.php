@@ -7,16 +7,16 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" id="homeNav" href="index.html">Home </a>
+                    <a class="nav-link" id="homeNav" href="index.php">Home </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" id="aboutUsNav" href="about.html">About Us</a>
+                    <a class="nav-link" id="aboutUsNav" href="about.php">About Us</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" id="searchNav" href="search.html">Search</a>
+                    <a class="nav-link" id="searchNav" href="search.php">Search</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" id="galleryNav" href="gallery.html">Gallery</a>
+                    <a class="nav-link" id="galleryNav" href="gallery.php">Gallery</a>
                 </li>
             </ul>
             <img class="float-right" id="navpic" src="images/boat1.jpg" alt="dragon boat">
