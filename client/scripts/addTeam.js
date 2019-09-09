@@ -12,7 +12,7 @@ $(function () {
     //restful API
 
     let objs;
-    $.getJSON("/api/leagues", function (leagues) {
+    $.getJSON("http://localhost:8081/api/leagues", function (leagues) {
 
         objs = leagues;
 
@@ -59,7 +59,7 @@ $(function () {
             return false;
         }
        
-        $.post("/api/teams", $("#addTeamForm").serialize(), function (data) {
+        $.post("http://localhost:8081/api/teams", $("#addTeamForm").serialize(), function (data) {
             data = JSON.parse(data);
             window.location.href = "teamDetails.html?teamid=" + data.TeamId;;
             
@@ -126,7 +126,7 @@ $("#leagueList").on("change", ()=> {
 
     let leaguecode =$('#leagueList').val();
 
-    $.getJSON("/api/leagues/" + leaguecode, function (league) {
+    $.getJSON("http://localhost:8081/api/leagues/" + leaguecode, function (league) {
         obj = league;
 
         $("#minmemberage").val(obj.MinAge)

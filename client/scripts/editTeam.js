@@ -1,6 +1,6 @@
 "use strict";
 //Description: This script will dynamically populate the page with all team information based on user
-//selection of a table that generated on a previous page.  This information will be pulled from a restful API server. 
+//selection of a table that generated on a previous page.  This information will be pulled from a restful http://localhost:8081/api server. 
 //Author:Cate Speakman
 
 
@@ -17,7 +17,7 @@ $(function () {
     let obj;
     //this ajax call will populte all of the existing team information
 
-    $.getJSON("/api/teams/" + teamid, function (team) {
+    $.getJSON("http://localhost:8081/api/teams/" + teamid, function (team) {
         obj = team;
         $("#teamid").val(obj.TeamId);
         $("#teamname").val(obj.TeamName);
@@ -58,7 +58,7 @@ $(function () {
         }
 
         $.ajax({
-            url: '/api/teams', // your api url
+            url: 'http://localhost:8081/api/teams', // your api url
             // jQuery < 1.9.0 -> use type
             // jQuery >= 1.9.0 -> use method
             data: $("#editTeamForm").serialize(),
