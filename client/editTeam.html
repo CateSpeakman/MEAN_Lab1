@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="images/dragonboaticon.jpg">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/site.css">
+    <link rel="stylesheet" href="css/editTeam.css">
+    <title>Harvey Lake Dragon Boats</title>
+</head>
+
+<body>
+    <!--nav bar-->
+    <nav class="navbar navbar-expand-lg navbar-light" id="navbar">
+        <a class="navbar-brand" id="navbarTitle" href="#">Harvey Lake Dragon Boats</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" id="homeNav" href="index.html">Home </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="aboutUsNav" href="about.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="searchNav" href="search.html">Search</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="galleryNav" href="gallery.html">Gallery</a>
+                </li>
+            </ul>
+            <img class="float-right" id="navpic" src="images/boat1.jpg" alt="dragon boat">
+        </div>
+    </nav>
+    <!--End of Nav Bar -->
+    <main>
+        <div class="container">
+            <h1 id="editTeamBanner">Edit Team</h1>
+            <p> Edit the information below. Once changes have been made, click on edit to save team
+                information. </p>
+
+            <!-- this form will allow the user to edit a team information-->
+            <form id="editTeamForm">
+
+                <input type="hidden" id="teamid" name="teamid">
+
+                <div class="form-row">
+                    <div class=" form-group col-md-4">
+                        <label class="form-check-label" for="league">League:</label>
+                        <input type="text" class="form-control" id="league" name="leaguecode" readonly>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <label for="teamname">Team Name</label>
+                        <input type="text" class="form-control" id="teamname" name="teamname" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <label for="managername">Manager Name</label>
+                        <input type="text" class="form-control" id="managername" name="managername" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <label for="managerphone">Manager Phone</label>
+                        <input type="tel" class="form-control" id="managerphone" name="managerphone" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <label for="manageremail">Manager Email</label>
+                        <input type="email" class="form-control" id="manageremail" name="manageremail" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <label for="maxteammembers">Max # Team Members</label>
+                        <input type="text" class="form-control" id="maxteammembers" name="maxteammembers" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <label for="minmemberage">Minimum Member Age</label>
+                        <input type="text" class="form-control" id="minmemberage" name="minmemberage" required readonly>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <label for="maxmemberage">Maximum Member Age</label>
+                        <input type="text" class="form-control" id="maxmemberage" name="maxmemberage" required readonly>
+                    </div>
+                </div>
+
+                <div class="form-check form-check-inline">
+
+                    <input class="form-check-input" type="radio" name="teamgender" id="male" value="Male">
+                    <label class="form-check-label" for="male">Male</label>
+                </div>
+
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="teamgender" id="female" value="Female">
+                    <label class="form-check-label" for="female">Female</label>
+                </div>
+
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="teamgender" id="any" value="Any">
+                    <label class="form-check-label" for="any">Any</label>
+                </div>
+            </form>
+
+            <!-- this section will contain the save button and cancel button-->
+            <div class="container">
+                <div class="row">
+                    <button type="button" id="editBtn" class="btn btn-info mt-2">Save</button>
+                    <a href="#" id="cancelBtn" class="btn btn-info mt-2 ml-3" role="button">Cancel</a>
+                </div>
+            </div>
+
+<!-- this section will display any error messages generated during form validation-->
+            <div class="container">
+                <div id="msgDiv">
+                    <ul id="errorMessages"></ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="scripts/editTeam.js"></script>
+</body>
+
+</html>

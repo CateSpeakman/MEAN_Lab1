@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="images/dragonboaticon.jpg">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/site.css">
+    <link rel="stylesheet" href="css/addTeamMember.css">
+    <title>Harvey Lake Dragon Boats</title>
+</head>
+
+<body>
+    <!--nav bar-->
+    <nav class="navbar navbar-expand-lg navbar-light" id="navbar">
+        <a class="navbar-brand" id="navbarTitle" href="#">Harvey Lake Dragon Boats</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" id="homeNav" href="index.html">Home </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="aboutUsNav" href="about.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="searchNav" href="search.html">Search</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="galleryNav" href="gallery.html">Gallery</a>
+                </li>
+            </ul>
+            <img class="float-right" id="navpic" src="images/boat1.jpg" alt="dragon boat">
+        </div>
+    </nav>
+    <!--End of Nav Bar -->
+
+    <main>
+        <section>
+            <!-- this section will allow the user to register for the team they were previously 
+            reviewing on the details page-->
+            <div class="container">
+                <h1 id="addMemberBanner">Add New Member</h1>
+                <p> To register a new team member please enter the information below. Once all fields have
+                    been completed, click on register to save the member information to the team. </p>
+                <!-- this starts the registration form-->
+                <form id="registerForm" name="registerForm">
+                    <div class="container">
+                        <div class="form-group row">
+                            <label for="teamName" class="col-sm-2 col-form-label ml-3">Team Name</label>
+                            <div class="col-sm-4">
+                                <input type="text" class="form-control" name="teamName" id="teamName" readonly>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container">
+                        <div class="form-group row">
+                            <label for="league" class="col-sm-2 col-form-label ml-2">League</label>
+                            <div class="col-sm-4">
+                                <input type="text" class="form-control" name="league" id="league" readonly>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container">
+                        <div class="form-group row">
+                            <label for="memberName" class="col-sm-2 col-form-label">Member Name</label>
+                            <div class="col-sm-4">
+                                <input type="text" class="form-control" name="membername" id="memberName"
+                                    placeholder="Member Name" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container">
+                        <div class="form-group row">
+                            <label for="contactName" class="col-sm-2 col-form-label">Contact Name</label>
+                            <div class="col-sm-4">
+                                <input type="text" class="form-control" name="contactname" id="contactName"
+                                    placeholder="Contact Name" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container">
+                        <div class="form-group row">
+                            <label for="email" class="col-sm-2 col-form-label">Email</label>
+                            <div class="col-sm-4">
+                                <input type="email" class="form-control" name="email" id="email" placeholder="Email"
+                                    required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container">
+                        <div class="form-group row">
+                            <label for="age" class="col-sm-2 col-form-label">Age</label>
+                            <div class="col-sm-4">
+                                <input type="text" class="form-control" name="age" id="age" placeholder="Age" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="gender" id="male" value="Male" checked>
+                            <label class="form-check-label" for="male">Male</label>
+                        </div>
+
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="gender" id="female" value="Female">
+                            <label class="form-check-label" for="female">Female</label>
+                        </div>
+                    </div>
+
+                    <div class="container">
+                        <div class="form-group row">
+                            <label for="phone" class="col-sm-2 col-form-label">Phone</label>
+                            <div class="col-sm-4">
+                                <input type="tel" class="form-control" name="phone" id="phone" placeholder="Phone"
+                                    required>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- this contains the Register button, the reset button, and cancel buttons-->
+                    <div class="container">
+                        <button id="saveBtn" type="button" class="btn btn-info">Register</button>
+                        <button id="resetBtn" type="reset" class="btn btn-info ml-3">Reset</button>
+                        <a href="#" id="cancelBtn" class="btn btn-info ml-3" role="button">Cancel</a>
+                    </div>
+
+                    <!-- this section will display any error messages that are generated during the form validation -->
+                    <div class="container" id="msgDiv">
+                        <ul id="errorMessages"></ul>
+                    </div>
+                    </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="scripts/addTeamMember.js"></script>
+</body>
+
+</html>
