@@ -8,7 +8,7 @@
 $(function () {
 
 
-    $("#cancelBtn").prop("href", "search.html");
+    $("#cancelBtn").prop("href", "search.php");
 
 
     let urlParams = new URLSearchParams(location.search);
@@ -64,7 +64,7 @@ $(function () {
             data: $("#editTeamForm").serialize(),
             method: 'PUT', // method is any HTTP method
             success: function () {
-                window.location.href = "teamDetails.html?teamid=" + $("#teamid").val();
+                window.location.href = "teamDetails.php?teamid=" + $("#teamid").val();
             }
         });//ends ajax call
 

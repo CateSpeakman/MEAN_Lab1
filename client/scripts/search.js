@@ -10,7 +10,7 @@ $(function () {
     //this function will call the JSON file and populate the table based on the call to 
     //restful API
 
-    $("#addTeamBtn").prop("href", "addTeam.html");
+    $("#addTeamBtn").prop("href", "addTeam.php");
     $("#teamListDiv").hide();
     let objs;
     $.getJSON("http://localhost:8081/api/leagues", function (leagues) {
@@ -56,8 +56,8 @@ function showTeamByLeague() {
 
                 let teamRow = "<tr><td>" + objs[i].TeamName
                     + "</td><td>" + objs[i].League
-                    + "</td><td><a href='teamDetails.html?teamid=" + objs[i].TeamId + "'>Details</a>"
-                    + "</td><td><a href='editTeam.html?teamid=" + objs[i].TeamId + "'>Edit</a>"
+                    + "</td><td><a href='teamDetails.php?teamid=" + objs[i].TeamId + "'>Details</a>"
+                    + "</td><td><a href='editTeam.php?teamid=" + objs[i].TeamId + "'>Edit</a>"
                     + "</td></tr>";
                 $("#teamTable tbody").append(teamRow);
 
@@ -83,8 +83,8 @@ function showAllTeams() {
 
             let teamRow = "<tr><td>" + objs[i].TeamName
                 + "</td><td>" + objs[i].League
-                + "</td><td><a href='teamDetails.html?teamid=" + objs[i].TeamId + "'>Details</a>"
-                + "</td><td><a href='editTeam.html?teamid=" + objs[i].TeamId + "'>Edit</a>"
+                + "</td><td><a href='teamDetails.php?teamid=" + objs[i].TeamId + "'>Details</a>"
+                + "</td><td><a href='editTeam.php?teamid=" + objs[i].TeamId + "'>Edit</a>"
                 + "</td></tr>";
             $("#teamTable tbody").append(teamRow);
 

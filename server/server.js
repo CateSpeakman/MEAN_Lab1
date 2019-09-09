@@ -185,39 +185,39 @@ function isValidMember(member)
 // THIS CODE ALLOWS REQUESTS FOR THE PAGES THROUGH
 
 app.get("/", function (req, res) {
-   res.sendFile( __dirname + "/public/" + "index.html" );
+   res.sendFile( __dirname + "/public/" + "index.php" );
 })
 
-app.get("/index.html", function (req, res) {
-    res.sendFile( __dirname + "/public/" + "index.html" );
+app.get("/index.php", function (req, res) {
+    res.sendFile( __dirname + "/public/" + "index.php" );
  })
 
- app.get("/search.html", function (req, res) {
-    res.sendFile( __dirname + "/public/" + "search.html" );
+ app.get("/search.php", function (req, res) {
+    res.sendFile( __dirname + "/public/" + "search.php" );
  })
 
- app.get("/about.html", function (req, res) {
-    res.sendFile( __dirname + "/public/" + "about.html" );
+ app.get("/about.php", function (req, res) {
+    res.sendFile( __dirname + "/public/" + "about.php" );
  })
 
- app.get("/gallery.html", function (req, res) {
-    res.sendFile( __dirname + "/public/" + "gallery.html" );
+ app.get("/gallery.php", function (req, res) {
+    res.sendFile( __dirname + "/public/" + "gallery.php" );
  })
 
- app.get("/teamDetails.html", function (req, res) {
-    res.sendFile( __dirname + "/public/" + "teamDetails.html" );
+ app.get("/teamDetails.php", function (req, res) {
+    res.sendFile( __dirname + "/public/" + "teamDetails.php" );
  })
 
- app.get("/addTeam.html", function (req, res) {
-    res.sendFile( __dirname + "/public/" + "addTeam.html" );
+ app.get("/addTeam.php", function (req, res) {
+    res.sendFile( __dirname + "/public/" + "addTeam.php" );
  })
 
- app.get("/editTeam.html", function (req, res) {
-    res.sendFile( __dirname + "/public/" + "editTeam.html" );
+ app.get("/editTeam.php", function (req, res) {
+    res.sendFile( __dirname + "/public/" + "editTeam.php" );
  })
 
- app.get("/addTeamMember.html", function (req, res) {
-    res.sendFile( __dirname + "/public/" + "addTeamMember.html" );
+ app.get("/addTeamMember.php", function (req, res) {
+    res.sendFile( __dirname + "/public/" + "addTeamMember.php" );
  })
 
 
