@@ -1,6 +1,6 @@
 "use strict";
 //Description: This script will dynamically populate the page with all team information based on user
-//selection of a table that generated on a previous page.  This information will be pulled from a restful API server. 
+//selection of a table that generated on a previous page.  This information will be pulled from a restful http://localhost:8081/api server. 
 //Author:Cate Speakman
 
 
@@ -15,7 +15,7 @@ $(function () {
 
     let obj;
     //this will populate the card for team info and for the team rules
-    $.getJSON("/api/teams/" + teamId, function (team) {
+    $.getJSON("http://localhost:8081/api/teams/" + teamId, function (team) {
         obj = team;
         $("#teamInfoCard").html(obj.TeamName);
         $("#cardText1").html("League: " + obj.League);

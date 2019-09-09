@@ -1,7 +1,7 @@
 "use strict";
 
 //Description: This script will add a member to team  based on team being viewed by user on the previous page.
-//This information will be posted from a restful API server. 
+//This information will be posted from a restful http://localhost8081/api server. 
 //Author:Cate Speakman
 
 
@@ -17,12 +17,12 @@ $(function () {
     let obj;
 //this will pull the team name and populate on the form
 
-    $.getJSON("/api/teams/" + id, function (team) {
+    $.getJSON("http://localhost:8081/api/teams/" + id, function (team) {
         obj = team;
 
         $("#teamName").val(obj.TeamName);
 
-        $.getJSON("/api/leagues/" + obj.League, function (league) {
+        $.getJSON("http://localhost:8081/api/leagues/" + obj.League, function (league) {
 
             //gets the full name of the league
             $("#league").val(league.Name);
@@ -56,7 +56,7 @@ $(function () {
             return;
         }
 
-        $.post("/api/teams/" + id + "/members", $("#registerForm").serialize(), function (data) {
+        $.post("http://localhost:8081/api/teams/" + id + "/members", $("#registerForm").serialize(), function (data) {
             window.location.href = "teamDetails.html?teamid=" + id;
           
         });//ends post call
